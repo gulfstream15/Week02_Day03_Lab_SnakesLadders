@@ -13,7 +13,7 @@ class Player
   def add_die_roll(dice)
     new_position = current_position + dice.get_random_number
     @current_position = new_position
-    return new_position
+    return @current_position
   end
 
 

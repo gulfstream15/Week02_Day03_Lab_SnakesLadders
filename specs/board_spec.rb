@@ -32,15 +32,22 @@ class BoardTest < MiniTest::Test
   # end
 
   def test_board_sees_snakes
-     snakeslad = SnakesLadders.new()
-     assert_equal(3, snakeslad.get_snake_head(17))
+    snakeslad = SnakesLadders.new()
+    assert_equal(1, snakeslad.get_snake_head(6))
   end 
 
-  def test_board_sees_snakes
-       snakeslad = SnakesLadders.new()
-       assert_equal(12, snakeslad.get_ladder_bottom(4))
+  def test_board_sees_ladders
+    snakeslad = SnakesLadders.new()
+    assert_equal(4, snakeslad.get_ladder_bottom(3))
   end
-
+  
+  def test_player_hits_snake
+     player1 = Player.new("Lewis")
+     player_position = player1.current_position
+     snakeslad = SnakesLadders.new()
+     snake_position = snakeslad.get_snake_head(6)
+     assert_equal(true, player_position == snake_position)
+  end
 
 
   

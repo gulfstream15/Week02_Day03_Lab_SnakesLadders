@@ -5,13 +5,13 @@ class SnakesLadders
 
   def initialize
     @snake =  {
-              17=>3,
-              13=>3
+              6=>1,
+              5=>2
               }
 
     @ladder = {
-              4=>12,
-              8=>18
+              3=>4,
+              # 4=>5
               }      
   end
   
