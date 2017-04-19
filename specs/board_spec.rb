@@ -2,6 +2,7 @@ require('minitest/autorun')
 require('minitest/rg')
 require_relative('../board.rb')
 require_relative('../player.rb')
+require_relative('../snakesladders.rb')
 
 class BoardTest < MiniTest::Test
   
@@ -25,9 +26,22 @@ class BoardTest < MiniTest::Test
     assert_equal(20, board.get_final_position) 
   end 
 
-  def test_check_player_position
-    player1 = Player.new("Lewis")
-    assert_equal(5, player1.current_position)
+  # def test_check_player_position
+  #   player1 = Player.new("Lewis")
+  #   assert_equal(5, player1.current_position)
+  # end
+
+  def test_board_sees_snakes
+     snakeslad = SnakesLadders.new()
+     assert_equal(3, snakeslad.get_snake_head(17))
+  end 
+
+  def test_board_sees_snakes
+       snakeslad = SnakesLadders.new()
+       assert_equal(12, snakeslad.get_ladder_bottom(4))
   end
+
+
+
   
 end

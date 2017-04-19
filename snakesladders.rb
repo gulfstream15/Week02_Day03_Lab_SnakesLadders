@@ -14,7 +14,13 @@ class SnakesLadders
               8=>18
               }      
   end
+  
+  def get_snake_head(key)
+    return snake[key]
+  end 
 
-
+  def get_ladder_bottom(key)
+    return ladder[key]
+  end 
 
 end
